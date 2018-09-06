@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jyg-Yo-a8g">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TestBLEWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="YBa-a9-cpb">
+            <objects>
+                <controller id="Jyg-Yo-a8g" customClass="InterfaceController" customModule="TestBLEWatch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="B22-cH-gKE">
+                            <items>
+                                <tableRow identifier="WatchCell" id="E1k-YB-WBO" customClass="TableViewRow" customModule="TestBLEWatch_Extension">
+                                    <group key="rootItem" width="1" height="64" alignment="left" id="EHD-EH-czf">
+                                        <items>
+                                            <label width="256" alignment="left" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="mIf-ZJ-xxx"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cellTextLabel" destination="mIf-ZJ-xxx" id="SrF-wZ-xyY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="B22-cH-gKE" id="mPU-iV-mxD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="325"/>
+        </scene>
+        <!--showDetails-->
+        <scene sceneID="3QW-kx-A68">
+            <objects>
+                <controller identifier="showDetails" id="PZU-Js-rhi" customClass="DetailInterfaceController" customModule="TestBLEWatch_Extension">
+                    <items>
+                        <separator alignment="left" id="YI4-Xy-am3"/>
+                        <label width="256" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="nlB-5E-CF9"/>
+                        <separator alignment="left" id="0XY-jm-oqe"/>
+                        <label width="256" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="3gR-87-V1P"/>
+                        <separator alignment="left" id="CLD-yy-oWh"/>
+                    </items>
+                    <connections>
+                        <outlet property="textLabel1" destination="nlB-5E-CF9" id="B03-pU-1j3"/>
+                        <outlet property="textLabel2" destination="3gR-87-V1P" id="fNh-jp-Jpe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="325"/>
+        </scene>
+    </scenes>
+</document>

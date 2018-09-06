@@ -1,0 +1,11 @@
+framework module BLEControllerWatch {
+  umbrella header "BLEControllerWatch.h"
+
+  export *
+  module * { export * }
+}
+
+module BLEControllerWatch.Swift {
+    header "BLEControllerWatch-Swift.h"
+    requires objc
+}
