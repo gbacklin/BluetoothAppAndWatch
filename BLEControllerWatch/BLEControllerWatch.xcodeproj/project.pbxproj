@@ -122,6 +122,7 @@
 				TargetAttributes = {
 					4EB28E13213DC18200066185 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1120;
 					};
 					4EB28E27213DC1F600066185 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -134,6 +135,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4EB28E0A213DC18200066185;
 			productRefGroup = 4EB28E15213DC18200066185 /* Products */;
@@ -338,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.BLEControllerWatch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -365,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.BLEControllerWatch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};

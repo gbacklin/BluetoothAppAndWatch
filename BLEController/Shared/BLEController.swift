@@ -158,6 +158,9 @@ extension BLEController: CBCentralManagerDelegate {
             currentState = "central.state is .poweredOn"
             centralManager.scanForPeripherals(withServices: nil, options: nil)
             startTimer()
+        @unknown default:
+            currentState = "central.state is .unknown"
+            stopTimer()
         }
         
     }
