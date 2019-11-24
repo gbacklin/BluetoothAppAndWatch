@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         connectButton.isHidden = true
 
         bleController = BLEController(delegate: self)
+        textView.textStorage.append(NSAttributedString(string: ("Hello")))
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -124,16 +126,21 @@ extension ViewController: BLEControllerDelegate {
     }
     
     func peripheralDidUpdateCharacteristicValue(peripheral: CBPeripheral, characteristic: CBCharacteristic) {
+        let text: NSMutableAttributedString = textView!.attributedText.mutableCopy() as! NSMutableAttributedString
         print("peripheralDidUpdateCharacteristicValue: \(peripheral) characteristic: \(characteristic)")
         let uuid = "\(characteristic.uuid)"
         if let value: Data = characteristic.value {
             if let stringValue = String(data: value, encoding: String.Encoding.utf8) {
-                textView.textStorage.append(NSAttributedString(string: "char: \(String(describing: uuid)) - value: [\(stringValue)] "))
+                let dataString = (NSAttributedString(string: "char: \(String(describing: uuid)) - value: [\(stringValue)] "))
+                text.append(dataString)
+                textView.text = text.string
             } else {
-                textView.textStorage.append(NSAttributedString(string: "char: \(uuid) - value: no value "))
+                text.append(NSAttributedString(string: "char: \(uuid) - value: no value "))
+                textView.text = text.string
             }
         } else {
-            textView.textStorage.append(NSAttributedString(string: "char: \(uuid) - value: no value "))
+            text.append(NSAttributedString(string: "char: \(uuid) - value: no value "))
+            textView.text = text.string
         }
         
         textView.textStorage.append(NSAttributedString(string: "\n"))
