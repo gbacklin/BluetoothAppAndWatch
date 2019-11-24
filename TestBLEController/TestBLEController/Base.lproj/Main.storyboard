@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-np-6Ch">
-                                <rect key="frame" x="158" y="134" width="59" height="30"/>
+                                <rect key="frame" x="158" y="147" width="59" height="30"/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
                                     <action selector="connect:" destination="rEG-Kz-DDa" eventType="touchUpInside" id="TWc-7G-ahE"/>
@@ -104,7 +104,7 @@
                             <constraint firstItem="DvT-ea-uJ6" firstAttribute="leading" secondItem="iVs-Jv-mfk" secondAttribute="leading" constant="16" id="lQa-nD-6iR"/>
                             <constraint firstItem="Rz8-u4-qrM" firstAttribute="leading" secondItem="iVs-Jv-mfk" secondAttribute="leading" constant="16" id="p8y-oG-9US"/>
                             <constraint firstItem="Qjf-Ep-hZE" firstAttribute="top" secondItem="HKu-8y-jyW" secondAttribute="bottom" constant="-1" id="qPb-RT-yic"/>
-                            <constraint firstItem="HKu-8y-jyW" firstAttribute="top" secondItem="7E2-np-6Ch" secondAttribute="bottom" constant="21" id="qrh-fh-iR0"/>
+                            <constraint firstItem="HKu-8y-jyW" firstAttribute="top" secondItem="7E2-np-6Ch" secondAttribute="bottom" constant="8" id="qrh-fh-iR0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iVs-Jv-mfk"/>
                     </view>
